@@ -6,7 +6,7 @@ console.log(galleryItems);
 
 const galleryEl = document.querySelector(".gallery")
 
-galleryEl.insertAdjacentHTML('beforeEnd', createItemsEl(galleryItems))
+galleryEl.insertAdjacentHTML('beforeend', createItemsEl(galleryItems))
 
 function createItemsEl(galleryItems) {
     return galleryItems.map(({ preview, original, description }) => {
@@ -18,9 +18,6 @@ function createItemsEl(galleryItems) {
 }
 
 var lightbox = new SimpleLightbox('.gallery a', {
-    overlay: false,
-    captions: true,
-    captionType: 'attr',
     captionsData    : 'alt',
     captionPosition: 'outside',
     captionDelay: 250,
